@@ -334,7 +334,7 @@ void TCommand :: GetWsContact(char *buf, int iLen) {
 
 	switch_cache_db_execute_sql2str(db, sql, ret, sizeof(ret), NULL);
 
-	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_ERROR, "sql %s\n", sql);
+	switch_log_printf(SWITCH_CHANNEL_LOG, SWITCH_LOG_DEBUG, "sql %s\n", sql);
 
 	switch_safe_free(sql);
 	if (db) { switch_cache_db_release_db_handle(&db); }
